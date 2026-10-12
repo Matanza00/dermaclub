@@ -11,6 +11,38 @@ It's a static site with no framework and no npm dependencies. A small Node scrip
 - `sitemap.xml` and `robots.txt` are generated at build time
 - Light and dark themes, responsive down to 360px
 
+## Screenshots
+
+![Home page, light theme](docs/screenshots/home.jpg)
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/home-dark.jpg" alt="Home page, dark theme"><br><sub><b>Home, dark theme.</b> Follows the visitor's system setting, with a manual switch in the footer.</sub></td>
+    <td width="50%"><img src="docs/screenshots/treatment-morpheus8.jpg" alt="Morpheus8 treatment page"><br><sub><b>Treatment page.</b> Clinic photos, an "at a glance" summary, visit steps and FAQs for each of the 20 treatments.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/treatments.jpg" alt="Treatments hub"><br><sub><b>Treatments.</b> All 20 treatments, filterable by category, plus a treatment finder by concern.</sub></td>
+    <td width="50%"><img src="docs/screenshots/shop.jpg" alt="AlumierMD shop"><br><sub><b>Shop.</b> 51 AlumierMD products with real photos and prices, across 9 categories.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/team.jpg" alt="Our team"><br><sub><b>Our team.</b> Portraits, roles and credentials, led by the Medical Director.</sub></td>
+    <td width="50%"><img src="docs/screenshots/financing.jpg" alt="Beautifi financing"><br><sub><b>Financing.</b> Monthly payment calculator built from Beautifi's published rate table.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/contact.jpg" alt="Contact and hours"><br><sub><b>Contact.</b> Address, live open/closed status in Toronto time, hours and a contact form.</sub></td>
+    <td width="50%" align="center"><img src="docs/screenshots/home-mobile.jpg" alt="Home page on a phone" width="300"><br><sub><b>Mobile.</b> Every page is responsive down to 360px.</sub></td>
+  </tr>
+</table>
+
+<details>
+<summary><b>Full home page</b> (click to expand)</summary>
+
+![Full home page](docs/screenshots/home-full.jpg)
+
+</details>
+
+To refresh the screenshots after design changes, run `npm run dev` and capture each page at 1440px wide. Save them over the files in `docs/screenshots/`.
+
 ## Project structure
 
 ```
@@ -19,6 +51,7 @@ src/
   styles.css    All styles; design tokens are at the top
   shell.html    Header, menu, footer, booking drawer and icon sprite shared by every page
 public/         Copied as-is: media/, og/, favicons
+docs/           README screenshots (not deployed)
 scripts/
   build.mjs     Prerenders every route into dist/
   serve.mjs     Local preview server with the same clean URLs as Vercel
