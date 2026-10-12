@@ -120,6 +120,7 @@ ${noindex ? '<meta name="robots" content="noindex, nofollow">\n' : ""}<link rel=
 <link rel="stylesheet" href="${cssFile}">
 ${key === "home" ? '<link rel="preload" as="image" href="/media/photo-hydro.webp">\n' : ""}${lds.map((o) => `<script type="application/ld+json">${json(o)}</script>`).join("\n")}
 <script>try{var t=localStorage.getItem("dc-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","ywq79twcsv");</script>
 </head>
 <body>
 `;
