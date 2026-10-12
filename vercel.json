@@ -1,0 +1,56 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/service", "destination": "/treatments", "permanent": true },
+    { "source": "/service/alumier-md", "destination": "/treatments/alumier-facial", "permanent": true },
+    { "source": "/service/botox", "destination": "/treatments/botox", "permanent": true },
+    { "source": "/service/evoke", "destination": "/treatments/evoke", "permanent": true },
+    { "source": "/service/fat-reducing-injections", "destination": "/treatments/fat-injections", "permanent": true },
+    { "source": "/service/injectables-and-fillers", "destination": "/treatments/fillers", "permanent": true },
+    { "source": "/service/skin-rejuvenation", "destination": "/treatments/skin-rejuvenation", "permanent": true },
+    { "source": "/service/skin-tightening", "destination": "/treatments/skin-tightening", "permanent": true },
+    { "source": "/service/glam-facial", "destination": "/treatments/glam-facial", "permanent": true },
+    { "source": "/service/micro-dermabrasion", "destination": "/treatments/microdermabrasion", "permanent": true },
+    { "source": "/service/oxygeno-facial", "destination": "/treatments/oxygeneo", "permanent": true },
+    { "source": "/service/vitamin-infusion", "destination": "/treatments/iv-drips", "permanent": true },
+    { "source": "/service/morpheus-8", "destination": "/treatments/morpheus8", "permanent": true },
+    { "source": "/service/sculptural-facials-injection", "destination": "/treatments/sculptural", "permanent": true },
+    { "source": "/service/twist-hair-growth-treatment", "destination": "/treatments/hair-growth", "permanent": true },
+    { "source": "/service/twist-pigmentation", "destination": "/treatments/pigmentation", "permanent": true },
+    { "source": "/service/triton-laser-hair-removal", "destination": "/treatments/laser-hair-removal", "permanent": true },
+    { "source": "/service/micro-needling", "destination": "/treatments/microneedling", "permanent": true },
+    { "source": "/service/women-wellness", "destination": "/treatments/votiva", "permanent": true },
+    { "source": "/service/hydro-dermabrasion-facial", "destination": "/treatments/hydrodermabrasion", "permanent": true },
+    { "source": "/service/chemical-peels", "destination": "/treatments/chemical-peels", "permanent": true },
+    { "source": "/skin-rejuvenation", "destination": "/treatments/skin-rejuvenation", "permanent": true },
+    { "source": "/micro-needling", "destination": "/treatments/microneedling", "permanent": true },
+    { "source": "/women-wellness", "destination": "/treatments/votiva", "permanent": true },
+    { "source": "/injectables-and-fillers", "destination": "/treatments/fillers", "permanent": true },
+    { "source": "/our-team", "destination": "/team", "permanent": true },
+    { "source": "/faqs", "destination": "/faq", "permanent": true },
+    { "source": "/product-category/:path*", "destination": "/shop", "permanent": true },
+    { "source": "/product/:path*", "destination": "/shop", "permanent": true },
+    { "source": "/cart", "destination": "/shop", "permanent": false },
+    { "source": "/privacy-policy", "destination": "/contact", "permanent": false },
+    { "source": "/terms-conditions", "destination": "/contact", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
+    { "source": "/media/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] },
+    { "source": "/og/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ]
+}
